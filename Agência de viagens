@@ -1,0 +1,108 @@
+package agenciaViagem;
+
+public class Cliente {
+	
+	private String nome;
+	private String endereco;
+	private String email;
+	private String celular;
+	private DestinoSudeste destinoSudeste;
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+	
+	public String getEndereco() {
+		return this.endereco;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+	public String getEmail() {
+		return this.email;
+	}
+	
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+	
+	public String getCelular() {
+		return this.celular;
+	}
+	
+	public void setDestinoSudeste (DestinoSudeste destinoSudeste) {
+		this.destinoSudeste = destinoSudeste;
+	}
+	
+	public DestinoSudeste getDestinoSudeste() {
+		return destinoSudeste;
+	}
+	
+}
+
+package agenciaViagem;
+
+public class DestinoSudeste {
+	private String destino_sudeste;
+	private String data;
+	
+	public void setDestino_sudeste(String destino_sudeste) {
+		this.destino_sudeste = destino_sudeste;
+	}
+	
+	public String getDestino_sudeste() {
+		return this.destino_sudeste;
+	}
+	
+	public void setData(String data) {
+		this.data = data;
+	}
+	
+	public String getData() {
+		return this.data;
+	}
+
+}
+package agenciaViagem;
+
+public class PrincipalAgencia {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Seja bem-vindo(a) ao nosso setor de cadastro");
+		System.out.println("Parabéns, você foi o vencedor do nosso sorteio");
+		System.out.println("O sr(a) tem direito a uma viagem para qualquer estado do sudeste");
+		
+		Cliente marlene = new Cliente();
+		marlene.setNome("Marlene Matias");
+		System.out.println(marlene.getNome());
+		
+		Cliente rua = new Cliente();
+		rua.setEndereco("Rua dos Alfeneiros, 4");
+		System.out.println(rua.getEndereco());
+		
+		Cliente mariam = new Cliente();
+		mariam.setEmail("marlenematias@gmail.com");
+		System.out.println(mariam.getEmail());
+		
+		Cliente num = new Cliente();
+		num.setCelular("91122334455");
+		System.out.println(num.getCelular());
+		  
+		DestinoSudeste rio = new DestinoSudeste();
+		rio.setDestino_sudeste("Sua viagem será para o Rio de Janeiro");
+		System.out.println(rio.getDestino_sudeste());
+		
+	}
+
+}
